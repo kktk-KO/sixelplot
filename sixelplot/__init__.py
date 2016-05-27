@@ -1,11 +1,11 @@
 import matplotlib
 import matplotlib.pyplot as plt
-import io
 import sixel
-
-def plot():
+import sys
+import io
+def show(output = sys.stdout):
     buf = io.BytesIO()
     plt.savefig(buf)
     buf.seek(0)
     writer = sixel.SixelWriter()
-    writer.draw(buf)
+    writer.draw(buf, output = output)
