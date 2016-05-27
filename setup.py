@@ -26,5 +26,4 @@ setup(
     ],
     keywords='sixel terminal image',
     packages=find_packages(exclude=['tests*']),
-    install_requires=['python-daemon']
 )
